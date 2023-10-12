@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Penjumlahan Bilangan</title>
+  </head>
+  <body>
+    <h1>Operasi Penjumlahan Bilangan</h1>
+    <p>Masukkan dua bilangan di bawah ini:</p>
+    <p>bilangan Pertama</p>
+    <input type="text" id="bilangan1" />
+    <p>Bilangan Kedua</p>
+    <input type="text" id="bilangan2" />
+    <p>
+      <button onclick="tambah()">Hitung</button>
+      <button onclick="reset()">Reset</button>
+    </p>
+
+    <script>
+      function tambah() {
+        var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+        var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+        if (!isNaN(bilangan1) && !isNaN(bilangan2)) {
+          var hasil = bilangan1 + bilangan2;
+          alert("Hasil penjumlahan: " + hasil);
+        } else {
+          alert("Masukkan dua bilangan yang valid.");
+        }
+      }
+
+      function reset() {
+        document.getElementById("bilangan1").value = "";
+        document.getElementById("bilangan2").value = "";
+      }
+    </script>
+  </body>
+</html>
